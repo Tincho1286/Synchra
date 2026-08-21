@@ -1,32 +1,19 @@
-# KiCad session and cache files
+# KiCad local state
 *.kicad_prl
 fp-info-cache*
 *backups/
-PCB-backups/
-\[GERBERS EXPORTADOS\]/
 
-# Material de consulta o titularidad de terceros: se conserva localmente,
-# pero no forma parte de la distribucion publica de FluxLink 433.
-\[INFORMES EETP\]/
-\[MODELOS DUKEDOKS\]/
-\[OPEN ESC´S\]/
-\[ANTENA\]/
-LIBRERIA KICAD/
-
-# Repositorio limpio preparado exclusivamente para la publicacion.
-fluxlink-public/
-
-# Exported and duplicated manufacturing archives
+# Packaged archives are kept out of source control
 *.zip
 *.rar
 
-# Local/editor files
+# Local tooling
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 
-# Build and temporary output
+# Temporary output
 build/
 dist/
 tmp/

@@ -1,58 +1,42 @@
-# FluxLink 433
+# Synchra
 
-**FluxLink 433** es un controlador electronico de velocidad (ESC) sensorless para motor brushless, basado en Arduino y operado por un control remoto con radio LoRa de 433 MHz.
+**Plataforma experimental de control electrónico para motores brushless y radio control.**
 
-> Estado actual: el esquema del hardware esta en desarrollo. El firmware propio del ESC, las pruebas de conmutacion y el control remoto forman la base experimental. No usar el sistema de potencia sin banco de pruebas y medidas de seguridad.
+Synchra reúne el desarrollo de un ESC sensorless basado en Arduino, su electrónica asociada y un sistema de control remoto. El trabajo está centrado en explorar conmutación trifásica, lectura de BEMF y la evolución de la comunicación de radio hacia LoRa en 433 MHz.
 
-## Objetivo
+> Proyecto de diseño electrónico en desarrollo. Los esquemáticos están publicados; el diseño final de las PCB continúa en proceso.
 
-Desarrollar y documentar un ESC sensorless de bajo costo, con radio control LoRa de 433 MHz, orientado al aprendizaje de electronica de potencia, control embebido y comunicaciones inalambricas.
+<p align="center">
+  <img src="media/experiments/phase-switching-112khz.jpg" width="31%" alt="Medición de conmutación de fase" />
+  <img src="media/experiments/motor-drive-waveforms.jpg" width="31%" alt="Ensayo de señales de accionamiento" />
+  <img src="media/experiments/multichannel-bench-measurement.jpg" width="31%" alt="Medición multicanal en banco" />
+</p>
 
-## Componentes del proyecto
+*Registros de ensayos de conmutación y medición en banco.*
 
-- **ESC:** control trifasico sensorless para motor brushless, basado en Arduino/ATmega328P, drivers IR2101 y deteccion de BEMF.
-- **Radio control:** transmisor LoRa de 433 MHz y control remoto para comandar aceleracion y direccion.
-- **Plataforma de prueba:** vehiculo RC impreso en 3D empleado para validar el sistema, no el objeto principal de desarrollo.
+## Alcance
 
-## Estructura actual
+- **ESC sensorless:** firmware Arduino para conmutación de motor BLDC con realimentación por BEMF y ensayos de arranque en lazo abierto y cerrado.
+- **Control remoto:** firmware de transmisión y recepción usado durante la etapa de prototipado RF24, con salida para aceleración y dirección.
+- **Radio LoRa 433 MHz:** próxima evolución de Synchra, prevista con módulo EBYTE E32 y la nueva antena del proyecto.
+- **Hardware:** esquemáticos y fuentes KiCad del ESC y del control remoto; la PCB definitiva aún no está cerrada.
 
-| Ruta | Contenido |
-| --- | --- |
-| `[MODELOS DUKEDOKS]` | Material local de DukeDoks, usado solo como plataforma de prueba; no se redistribuye. |
-| `[PCB AUTO V1]` | Esquematico y archivos de trabajo del ESC; el PCB aun esta en diseno. |
-| `[PCB RADIO CONTROL]` | Esquematico y archivos de trabajo del control remoto; el PCB aun esta en diseno. |
-| `[PROGRAMAS]` | Firmware propio para emisor, receptor, ESC y pruebas. |
-| `[OPEN ESC´S]` | Referencias locales de Electronoobs y otros autores; no se redistribuyen. |
-| `[ANTENA]` | Manuales locales de referencia para el enlace LoRa; no se redistribuyen. |
-| `[IMAGENES RELACIONADAS]` | Fotos de ensayos y prototipos previos; la evidencia fotografica se publica. |
-| `LIBRERIA KICAD` | Dependencias locales de KiCad; no se redistribuyen. |
-| `[INFORMES EETP]` | Informe historico privado; no se publica. |
-| `docs/` | Documentacion mantenida del proyecto. |
+## Estructura
 
-## Inicio rapido
+```text
+firmware/       Código del ESC, radio de prototipo y experimentos
+hardware/       Fuentes KiCad del ESC y del control remoto
+archive/        Exportaciones históricas de fabricación
+media/          Registros visuales de los ensayos
+docs/           Arquitectura, estado y referencias
+```
 
-1. Abrir los proyectos `.kicad_pro` con una version compatible de KiCad.
-2. Abrir cada `.ino` desde su carpeta para que Arduino IDE encuentre sus archivos auxiliares.
-3. Configurar el modulo LoRa de 433 MHz de acuerdo con su manual y firmware correspondiente.
-4. Validar el control remoto y el enlace de radio sin motor conectado.
-5. Realizar pruebas del ESC exclusivamente con fuente limitada, fusible, motor asegurado y medicion de corriente.
+## Estado actual
 
-## Documentacion
+El núcleo del ESC y sus pruebas de sincronización forman la base activa del proyecto. El enlace RF24 incluido es un prototipo de radio previo; no representa aún la implementación LoRa. La migración a LoRa 433 MHz y el diseño de PCB son las próximas líneas de trabajo.
 
-- [Arquitectura](docs/ARCHITECTURE.md)
-- [Estado de avance](docs/PROJECT_STATUS.md)
-- [Inventario tecnico](docs/TECHNICAL_INVENTORY.md)
-- [Plan de ensayos](docs/TEST_PLAN.md)
-- [Evolucion y evidencia de prototipos](docs/EVOLUTION.md)
-- [Referencias y atribuciones](docs/REFERENCES.md)
-- [Guia de contribucion](CONTRIBUTING.md)
+Más detalle: [arquitectura](docs/architecture.md), [estado de desarrollo](docs/status.md) y [referencias](docs/references.md).
 
-## Creditos y procedencia
+## Créditos y referencias
 
-Los modelos del vehiculo pertenecen a **DukeDoks** y se utilizan exclusivamente como plataforma de prueba del ESC. La carpeta `[OPEN ESC´S]` contiene programas de referencia, incluido material de Electronoobs y otros autores, estudiados durante el desarrollo. El firmware del ESC alojado en `[PROGRAMAS]` fue escrito integramente para este proyecto. Antes de redistribuir recursos externos, verificar sus licencias y condiciones.
-
-El informe EETP se mantiene fuera de la version publica. La procedencia, alcance y referencias tecnicas se documentan en [Referencias y atribuciones](docs/REFERENCES.md).
-
-## Licencia
-
-Pendiente de definicion por el autor. Hasta que se publique una licencia explicita, no se conceden permisos adicionales de uso, redistribucion o comercializacion.
+El vehículo/modelo empleado como plataforma de prueba pertenece a **DukeDoks**. El firmware y la electrónica de Synchra son desarrollos propios; durante la investigación se consultaron los proyectos de **Electronoobs** y otros trabajos públicos de ESC. Ver [referencias](docs/references.md) para el alcance de cada aporte.
