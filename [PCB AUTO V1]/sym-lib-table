@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "DRIVER FET")(type "KiCad")(uri "C:/Users/lesca/OneDrive/[PROYECTO] TRUGGY/LIBRERIA KICAD/LM2104/2025-02-24_18-54-02.kicad_sym")(options "")(descr ""))
+  (lib (name "FET")(type "KiCad")(uri "C:/Users/lesca/OneDrive/[PROYECTO] TRUGGY/LIBRERIA KICAD/CSD18502KCS/KiCADv6/2025-02-24_19-02-02.kicad_sym")(options "")(descr ""))
+)
