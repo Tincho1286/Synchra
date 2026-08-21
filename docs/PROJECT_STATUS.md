@@ -6,12 +6,14 @@ Actualizado: 2026-08-21
 | --- | --- | --- | --- |
 | Plataforma DukeDoks | Recurso de prueba | Modelos STL y reporte historico de armado | Mantener atribucion y separar de la autoria del ESC. |
 | Control remoto LoRa 433 MHz | En desarrollo | Manuales de antena y programas de prueba | Probar alcance, perdida de paquetes y autonomia. |
+| Actualizacion de antena LoRa | Planificada | Recursos tecnicos de la familia EBYTE E32 en `[ANTENA]` | Integrar el modulo de 433 MHz y validar alcance. |
 | Receptor y direccion | En desarrollo | Variantes de receptor y failsafe | Validar limites de servo y respuesta ante perdida de enlace. |
 | Esquematico de radio | En desarrollo | Archivos KiCad de trabajo | Revisar esquema y definir PCB. |
 | Esquematico principal / ESC | En desarrollo | KiCad, BOM y posiciones de referencia | Completar diseno de PCB y auditoria electrica. |
 | ESC sensorless | Experimental / no validado | Firmware propio y pruebas de lazo abierto/cerrado | Lograr arranque repetible y conmutacion BEMF estable. |
 | Datos de ensayo | No disponible | No hay registros tabulares de medicion | Crear y completar bitacora de pruebas. |
 | Comunicacion y difusion | Inicial | Informe, dos imagenes de fases y renders | Producir fotos, video y ficha tecnica. |
+| Evidencia de prototipos | Disponible | Fotos propias de ensayos y prototipos anteriores | Mantener una seleccion cronologica en el repositorio. |
 
 ## Riesgos abiertos
 

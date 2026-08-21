@@ -12,6 +12,8 @@ Control remoto -> Transmisor LoRa 433 MHz -> Enlace LoRa -> Receptor
 
 El sistema utiliza un transmisor LoRa de 433 MHz y un control remoto para enviar las ordenes de aceleracion y direccion. El receptor debe convertir esas ordenes en PWM de acelerador y senal de servo, con una condicion de seguridad ante perdida de enlace. Las implementaciones de prueba presentes en `[PROGRAMAS]` documentan la evolucion del software y sus referencias tecnicas.
 
+La proxima actualizacion contempla integrar un modulo de la familia **EBYTE E32** para LoRa de 433 MHz. La carpeta local `[ANTENA]` conserva el manual, ejemplos y recursos de encapsulado/PCB de esa familia como base de integracion; la documentacion publica conserva esta decision de diseno y su procedencia.
+
 ## ESC
 
 El firmware propio usa un Arduino basado en ATmega328P para:

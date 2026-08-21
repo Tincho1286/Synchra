@@ -24,6 +24,7 @@ Desarrollar y documentar un ESC sensorless de bajo costo, con radio control LoRa
 | `[PROGRAMAS]` | Firmware propio para emisor, receptor, ESC y pruebas. |
 | `[OPEN ESC´S]` | Referencias locales de Electronoobs y otros autores; no se redistribuyen. |
 | `[ANTENA]` | Manuales locales de referencia para el enlace LoRa; no se redistribuyen. |
+| `[IMAGENES RELACIONADAS]` | Fotos de ensayos y prototipos previos; la evidencia fotografica se publica. |
 | `LIBRERIA KICAD` | Dependencias locales de KiCad; no se redistribuyen. |
 | `[INFORMES EETP]` | Informe historico privado; no se publica. |
 | `docs/` | Documentacion mantenida del proyecto. |
@@ -42,13 +43,15 @@ Desarrollar y documentar un ESC sensorless de bajo costo, con radio control LoRa
 - [Estado de avance](docs/PROJECT_STATUS.md)
 - [Inventario tecnico](docs/TECHNICAL_INVENTORY.md)
 - [Plan de ensayos](docs/TEST_PLAN.md)
+- [Evolucion y evidencia de prototipos](docs/EVOLUTION.md)
+- [Referencias y atribuciones](docs/REFERENCES.md)
 - [Guia de contribucion](CONTRIBUTING.md)
 
 ## Creditos y procedencia
 
 Los modelos del vehiculo pertenecen a **DukeDoks** y se utilizan exclusivamente como plataforma de prueba del ESC. La carpeta `[OPEN ESC´S]` contiene programas de referencia, incluido material de Electronoobs y otros autores, estudiados durante el desarrollo. El firmware del ESC alojado en `[PROGRAMAS]` fue escrito integramente para este proyecto. Antes de redistribuir recursos externos, verificar sus licencias y condiciones.
 
-Los archivos originales de terceros y el informe EETP se mantienen fuera de la version publica. La procedencia, alcance y referencias tecnicas se documentan en [Referencias y atribuciones](docs/REFERENCES.md).
+El informe EETP se mantiene fuera de la version publica. La procedencia, alcance y referencias tecnicas se documentan en [Referencias y atribuciones](docs/REFERENCES.md).
 
 ## Licencia
 
