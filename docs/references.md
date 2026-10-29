@@ -1,13 +1,17 @@
 # Referencias y atribuciones
 
-## DukeDoks
+El firmware y la electrónica de Synchra fueron desarrollados específicamente para este proyecto. Durante su investigación y sus ensayos se utilizaron plataformas mecánicas y fuentes de consulta externas, cuyos aportes se detallan a continuación.
 
-Los modelos y el vehículo de **DukeDoks** se utilizaron únicamente como plataforma mecánica para pruebas. No son parte del desarrollo electrónico ni del diseño de Synchra.
+## DukeDoks: plataforma mecánica de ensayo
 
-## Electronoobs y otros proyectos de ESC
+El vehículo y los modelos de **DukeDoks** se utilizaron como plataforma mecánica para las pruebas de Synchra. Esa plataforma permitió disponer de un soporte para los ensayos, mientras que el alcance del desarrollo propio corresponde al firmware y a la electrónica del proyecto.
 
-Los proyectos de **Electronoobs** y otros desarrollos públicos de controladores fueron material de consulta durante la investigación. El código de Synchra incluido en `firmware/` fue escrito para este proyecto; las referencias se reconocen por su aporte conceptual y de aprendizaje.
+## Electronoobs y otros proyectos de ESC: investigación y aprendizaje
 
-## EBYTE y LoRa
+Para estudiar el funcionamiento de los controladores de motores brushless se consultaron los proyectos de **Electronoobs** y otros ESC públicos. Estas referencias aportaron material conceptual y de aprendizaje durante la investigación; el código incluido en [`firmware/`](../firmware/) y la electrónica de Synchra fueron desarrollados para este proyecto.
 
-La documentación técnica de los módulos EBYTE E32 sirve de referencia para la próxima etapa de comunicación LoRa a 433 MHz. La integración está planificada y aún no forma parte de la versión de firmware publicada.
+## EBYTE E32: referencia para la futura integración LoRa
+
+Como continuación del prototipo de radio RF24, se prevé integrar un enlace LoRa de 433 MHz con un módulo EBYTE E32 y una nueva antena. La documentación técnica de EBYTE sirve de referencia para esa etapa, que todavía no forma parte del firmware publicado.
+
+La [arquitectura](architecture.md) describe cómo se relacionan el ESC, el control remoto y el hardware, mientras que el [estado de desarrollo](status.md) permite ubicar cada uno de estos aportes dentro de la fase experimental actual.
